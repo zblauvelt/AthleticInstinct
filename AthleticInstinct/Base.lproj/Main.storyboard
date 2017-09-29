@@ -73,6 +73,7 @@
                                         </state>
                                         <connections>
                                             <action selector="singInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CgO-MB-G8W"/>
+                                            <segue destination="v3F-CM-U0p" kind="show" identifier="goToMainScreen" id="OHg-NK-QVR"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -115,6 +116,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="44.927536231884062" y="35.054347826086961"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="7Fa-Ma-nXX">
+            <objects>
+                <viewController id="v3F-CM-U0p" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HnG-zw-9OB"/>
+                        <viewControllerLayoutGuide type="bottom" id="a0K-If-dFJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="t1v-tm-BHU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.219294399" green="0.50973111390000003" blue="0.98710876700000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B5M-LQ-fQZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="694" y="36"/>
         </scene>
     </scenes>
     <resources>

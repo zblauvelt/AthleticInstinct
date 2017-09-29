@@ -20,9 +20,8 @@ class SignInVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
-
+    //MARK: Firebase Email Authentication
     @IBAction func singInTapped(_ sender: Any) {
         if let email = emailTextField.text, let password = passwordTextField.text {
             
@@ -33,6 +32,7 @@ class SignInVC: UIViewController {
                         //let userData = ["provider": user.providerID]
                         //self.completeSignIn(id: user.uid, userData: userData)
                     //}
+                    self.completeSignIn()
                 } else {
                     FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
                         if error != nil {
@@ -44,16 +44,22 @@ class SignInVC: UIViewController {
                                 //let userData = ["provider": user.providerID]
                                 //self.completeSignIn(id: user.uid, userData: userData)
                             //}
+                            self.completeSignIn()
                         }
                     })
                 }
             })
             
         }
-
-        
     }
 
-    
+    func completeSignIn() {
+        //DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
+        //let keychainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
+        //print("ZACK: Data saved to keychain \(keychainResult)")
+        emailTextField.text = nil
+        passwordTextField.text = nil
+        performSegue(withIdentifier: "goToMainScreen", sender: nil)
+    }
 
 }
