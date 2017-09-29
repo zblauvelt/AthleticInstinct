@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import FBSDKCoreKit
+import FBSDKLoginKit
 
 class SignInVC: UIViewController {
     
@@ -21,6 +23,44 @@ class SignInVC: UIViewController {
         super.viewDidLoad()
 
     }
+    
+    @IBAction func facebookButtonTapped(_ sender: Any) {
+        
+        let facebookLogin = FBSDKLoginManager()
+        
+        facebookLogin.logIn(withReadPermissions: ["email"], from: self) { (result, error) in
+            if error != nil {
+                print("ZACK: Unable to authenticate with Facebook - \(String(describing: error))")
+            } else if result?.isCancelled == true {
+                print("ZACK: User cancelled Facebook authentication")
+            } else {
+                print("ZACK: Successfully authentication with Facebook")
+                let credential = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+                
+                self.firebaseAuth(credential)
+                
+            }
+        }
+    }
+    
+    
+    func firebaseAuth(_ credential: FIRAuthCredential) {
+        FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
+            if error != nil {
+                print("ZACK: Unable to authenticate with Firebase - \(String(describing: error))")
+            } else {
+                print("ZACK: Successfully authenticated with Firebase")
+                
+                //if let user = user {
+                    //let userData = ["provider": credential.provider]
+                //}
+                self.completeSignIn()
+            }
+        })
+        
+    }
+    
+    
     //MARK: Firebase Email Authentication
     @IBAction func singInTapped(_ sender: Any) {
         if let email = emailTextField.text, let password = passwordTextField.text {
