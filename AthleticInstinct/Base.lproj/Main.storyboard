@@ -76,7 +76,7 @@
                                         </state>
                                         <connections>
                                             <action selector="singInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CgO-MB-G8W"/>
-                                            <segue destination="v3F-CM-U0p" kind="show" identifier="goToMainScreen" id="OHg-NK-QVR"/>
+                                            <segue destination="fD4-C2-9q9" kind="showDetail" identifier="goToMainScreen" id="3n7-20-tDc"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -120,23 +120,108 @@
             </objects>
             <point key="canvasLocation" x="44.927536231884062" y="35.054347826086961"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="7Fa-Ma-nXX">
+        <!--Category-->
+        <scene sceneID="pnJ-MP-Hxv">
             <objects>
-                <viewController id="v3F-CM-U0p" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="HnG-zw-9OB"/>
-                        <viewControllerLayoutGuide type="bottom" id="a0K-If-dFJ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="t1v-tm-BHU">
+                <collectionViewController id="baq-cL-rNG" customClass="CategoryVC" customModule="AthleticInstinct" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="dVi-oR-AZ6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.219294399" green="0.50973111390000003" blue="0.98710876700000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iC4-Fy-Fzg">
+                            <size key="itemSize" width="149" height="127"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCell" id="moC-j6-PbY" customClass="CategoryViewCell" customModule="AthleticInstinct" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="149" height="127"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="149" height="127"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 Minutes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2y3-zn-HcF">
+                                            <rect key="frame" x="19.666666666666664" y="21" width="110" height="85"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="85" id="5BE-0T-TxE"/>
+                                                <constraint firstAttribute="width" constant="110" id="5fs-Si-eod"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="2y3-zn-HcF" firstAttribute="centerX" secondItem="moC-j6-PbY" secondAttribute="centerX" id="cVD-dP-xqC"/>
+                                    <constraint firstItem="2y3-zn-HcF" firstAttribute="centerY" secondItem="moC-j6-PbY" secondAttribute="centerY" id="cjE-rp-U5d"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="categoryNameLabel" destination="2y3-zn-HcF" id="eE6-8R-usu"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="baq-cL-rNG" id="mUq-8l-upL"/>
+                            <outlet property="delegate" destination="baq-cL-rNG" id="u1r-mv-46S"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Category" id="slP-1u-fAx"/>
+                    <connections>
+                        <segue destination="q8V-tR-phR" kind="show" identifier="goToWorkOuts" id="Y9t-0c-yUD"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8xM-tq-zHN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1715.9420289855075" y="34.239130434782609"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9T1-nd-1ha">
+            <objects>
+                <viewController id="q8V-tR-phR" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hmh-9X-YyJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="7eT-ZB-Mt7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="X0s-vP-Nll">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WorkOut" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XnS-wu-Fx5">
+                                <rect key="frame" x="165" y="358" width="98" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="B5M-LQ-fQZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ik9-Wc-6Sg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="694" y="36"/>
+            <point key="canvasLocation" x="2450.7246376811595" y="44.836956521739133"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3y3-97-WXY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fD4-C2-9q9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="czN-T4-1Ua">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="baq-cL-rNG" kind="relationship" relationship="rootViewController" id="HDT-ft-WMa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WhY-hg-06Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="808.69565217391312" y="34.239130434782609"/>
         </scene>
     </scenes>
     <resources>
