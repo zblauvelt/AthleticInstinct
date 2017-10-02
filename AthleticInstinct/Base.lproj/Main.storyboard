@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,20 +19,20 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SignInBackground" translatesAutoresizingMaskIntoConstraints="NO" id="6Ry-fL-qfJ">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="White Logo" translatesAutoresizingMaskIntoConstraints="NO" id="2Zr-yg-Z44">
-                                <rect key="frame" x="75" y="55" width="264" height="125"/>
+                                <rect key="frame" x="75" y="55" width="225" height="125"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="125" id="g6h-eB-w0E"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Everyone's an Athlete" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WSh-7b-9aS">
-                                <rect key="frame" x="84" y="182" width="255" height="33"/>
+                                <rect key="frame" x="64.5" y="182" width="255" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="255" id="33r-Qt-xrU"/>
                                 </constraints>
@@ -40,14 +41,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cjv-1E-7pm" customClass="FancyButton" customModule="AthleticInstinct" customModuleProvider="target">
-                                <rect key="frame" x="51.666666666666657" y="600" width="311" height="61"/>
+                                <rect key="frame" x="32" y="531" width="311" height="61"/>
                                 <state key="normal" image="Facebook button"/>
                                 <connections>
                                     <action selector="facebookButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P9Z-ew-2cD"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="T3J-rZ-3Ys">
-                                <rect key="frame" x="51.666666666666657" y="454" width="311" height="136"/>
+                                <rect key="frame" x="32" y="385" width="311" height="136"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OPC-bo-pOP">
                                         <rect key="frame" x="0.0" y="0.0" width="311" height="40"/>
@@ -56,7 +57,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Yl-qx-r7T">
                                         <rect key="frame" x="0.0" y="48" width="311" height="40"/>
@@ -82,7 +83,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you haven't signed in before an account will automatically be created for you." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kqj-8P-t9h">
-                                <rect key="frame" x="52" y="658" width="310" height="45"/>
+                                <rect key="frame" x="32.5" y="589" width="310" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="Cax-cl-PvM"/>
                                     <constraint firstAttribute="width" constant="310" id="Mfp-8j-uBQ"/>
@@ -125,29 +126,28 @@
             <objects>
                 <collectionViewController id="baq-cL-rNG" customClass="CategoryVC" customModule="AthleticInstinct" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="dVi-oR-AZ6">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iC4-Fy-Fzg">
-                            <size key="itemSize" width="149" height="127"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="30" minimumInteritemSpacing="30" id="iC4-Fy-Fzg">
+                            <size key="itemSize" width="300" height="150"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="sectionInset" minX="30" minY="20" maxX="30" maxY="20"/>
                         </collectionViewFlowLayout>
+                        <imageView key="backgroundView" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SignInBackground" id="mBk-hf-XDr">
+                            <rect key="frame" x="0.0" y="-64" width="375" height="667"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCell" id="moC-j6-PbY" customClass="CategoryViewCell" customModule="AthleticInstinct" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="149" height="127"/>
+                                <rect key="frame" x="38" y="20" width="300" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="149" height="127"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="301" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 Minutes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2y3-zn-HcF">
-                                            <rect key="frame" x="19.666666666666664" y="21" width="110" height="85"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="85" id="5BE-0T-TxE"/>
-                                                <constraint firstAttribute="width" constant="110" id="5fs-Si-eod"/>
-                                            </constraints>
+                                            <rect key="frame" x="8" y="8" width="284" height="134"/>
                                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -156,8 +156,10 @@
                                 </view>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="2y3-zn-HcF" firstAttribute="centerX" secondItem="moC-j6-PbY" secondAttribute="centerX" id="cVD-dP-xqC"/>
-                                    <constraint firstItem="2y3-zn-HcF" firstAttribute="centerY" secondItem="moC-j6-PbY" secondAttribute="centerY" id="cjE-rp-U5d"/>
+                                    <constraint firstItem="2y3-zn-HcF" firstAttribute="top" secondItem="moC-j6-PbY" secondAttribute="topMargin" id="DKo-ka-SSq"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="2y3-zn-HcF" secondAttribute="trailing" id="h5q-qt-1dN"/>
+                                    <constraint firstItem="2y3-zn-HcF" firstAttribute="leading" secondItem="moC-j6-PbY" secondAttribute="leadingMargin" id="igm-uQ-zIb"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="2y3-zn-HcF" secondAttribute="bottom" id="whd-0S-Pxv"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="categoryNameLabel" destination="2y3-zn-HcF" id="eE6-8R-usu"/>
@@ -187,7 +189,7 @@
                         <viewControllerLayoutGuide type="bottom" id="7eT-ZB-Mt7"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="X0s-vP-Nll">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WorkOut" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XnS-wu-Fx5">
@@ -203,7 +205,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ik9-Wc-6Sg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2450.7246376811595" y="44.836956521739133"/>
+            <point key="canvasLocation" x="2451" y="34"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3y3-97-WXY">

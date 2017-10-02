@@ -12,7 +12,7 @@ import UIKit
 
  let reuseIdentifier = "CategoryCell"
 
-var categories = ["10 Minutes","15 minutes","Bodyweight","Kettlebell","Battle Ropes","Dumbbells","Core Work","Upper Body","Lower Body","30 Minutes"]
+var categories = ["10 Minutes","15 Minutes","Bodyweight","Kettlebell","Battle Ropes","Dumbbells","Core Work","Upper Body","Lower Body","30 Minutes"]
 
 class CategoryVC: UICollectionViewController {
     
@@ -49,6 +49,9 @@ class CategoryVC: UICollectionViewController {
         // Configure the cell
        let categoryName = categories[indexPath.row]
         cell.categoryNameLabel.text = categoryName
+        
+        //cell.layer.cornerRadius = 150/2
+        
         return cell
     }
     
